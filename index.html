@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iPhone Universe — Всё об iPhone</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav container">
+        <a href="index.html" class="nav__logo">
+          <img class="nav__logo-icon" src="img/apple-logo.svg" alt="" width="22" height="22" /> iPhone Universe
+        </a>
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#models" class="nav__link">Модели</a></li>
+          <li class="nav__item"><a href="#features" class="nav__link">Функции</a></li>
+          <li class="nav__item"><a href="#compare" class="nav__link">Сравнение</a></li>
+          <li class="nav__item"><a href="form.html" class="nav__link nav__link--cta">Регистрация</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero__inner">
+          <div class="hero__text">
+            <h1 class="hero__title">Будущее<br /><em>в твоих руках</em></h1>
+            <p class="hero__desc">
+              Откройте мир технологий Apple. Обзоры, сравнения и всё,
+              что вы хотели знать об iPhone.
+            </p>
+            <a href="#models" class="btn btn--primary">Смотреть модели</a>
+            <a href="demo.html" class="btn btn--outline">Демо эффекты</a>
+          </div>
+          <figure class="hero__figure">
+            <img
+              src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=500&q=80"
+              alt="iPhone 15 Pro на чёрном фоне"
+              width="400"
+              height="500"
+            />
+            <figcaption>iPhone 15 Pro — титановый корпус</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section" id="models">
+        <div class="container">
+          <h2 class="section__title">Актуальные модели</h2>
+          <p class="section__sub">Выберите устройство, которое подходит именно вам</p>
+          <div class="cards">
+            <article class="card">
+              <figure class="card__img-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=400&q=80"
+                  alt="iPhone 15"
+                  width="300"
+                  height="220"
+                />
+              </figure>
+              <div class="card__body">
+                <h3 class="card__title">iPhone 15</h3>
+                <p class="card__text">Чип A16 Bionic, Dynamic Island, камера 48 Мп и USB-C.</p>
+                <span class="card__price">от 79 990 ₽</span>
+                <a href="#" class="btn btn--sm">Подробнее</a>
+              </div>
+            </article>
+
+            <article class="card card--featured">
+              <span class="card__badge">Топ продаж</span>
+              <figure class="card__img-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1632661674596-df8be070a5c5?w=400&q=80"
+                  alt="iPhone 15 Pro"
+                  width="300"
+                  height="220"
+                />
+              </figure>
+              <div class="card__body">
+                <h3 class="card__title">iPhone 15 Pro</h3>
+                <p class="card__text">Титановый корпус, чип A17 Pro, телефото 5× и кнопка действия.</p>
+                <span class="card__price">от 109 990 ₽</span>
+                <a href="#" class="btn btn--sm">Подробнее</a>
+              </div>
+            </article>
+
+            <article class="card">
+              <figure class="card__img-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1591337676887-a217a6970a8a?w=400&q=80"
+                  alt="iPhone 14"
+                  width="300"
+                  height="220"
+                />
+              </figure>
+              <div class="card__body">
+                <h3 class="card__title">iPhone 14</h3>
+                <p class="card__text">Чип A15 Bionic, улучшенная система камер и увеличенный аккумулятор.</p>
+                <span class="card__price">от 59 990 ₽</span>
+                <a href="#" class="btn btn--sm">Подробнее</a>
+              </div>
+            </article>
+
+            <!-- ЛАБ 9: карточка с анимированным лоадером -->
+            <article class="card card--loader-demo">
+              <div class="loader" aria-label="Загрузка...">
+                <span class="loader__ring"></span>
+                <span class="loader__ring"></span>
+              </div>
+              <div class="card__reveal">
+                <figure class="card__img-wrap">
+                  <img
+                    src="https://images.unsplash.com/photo-1556656793-08538906a9f8?w=400&q=80"
+                    alt="iPhone SE"
+                    width="300"
+                    height="220"
+                  />
+                </figure>
+                <div class="card__body">
+                  <h3 class="card__title">iPhone SE (3-го поколения)</h3>
+                  <p class="card__text">Компактный формат, Touch ID и мощный чип A15.</p>
+                  <span class="card__price">от 44 990 ₽</span>
+                  <a href="#" class="btn btn--sm">Подробнее</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--dark" id="features">
+        <div class="container">
+          <h2 class="section__title section__title--light">Ключевые функции</h2>
+          <div class="features">
+            <div class="feature">
+              <div class="feature__icon">📷</div>
+              <h3 class="feature__title">Камера</h3>
+              <p class="feature__text">Главная камера 48 Мп с поддержкой ProRAW и ProRes видео. Ночной режим и Smart HDR.</p>
+            </div>
+            <div class="feature">
+              <div class="feature__icon">⚡</div>
+              <h3 class="feature__title">Производительность</h3>
+              <p class="feature__text">Чипы серии A — самые быстрые в мире для смартфонов. Игры, видеомонтаж и AR.</p>
+            </div>
+            <div class="feature">
+              <div class="feature__icon">🔋</div>
+              <h3 class="feature__title">Автономность</h3>
+              <p class="feature__text">До 29 часов воспроизведения видео. Быстрая зарядка и беспроводная MagSafe.</p>
+            </div>
+            <div class="feature">
+              <div class="feature__icon">🔒</div>
+              <h3 class="feature__title">Безопасность</h3>
+              <p class="feature__text">Face ID, Secure Enclave и сквозное шифрование. Ваши данные защищены на уровне железа.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="compare">
+        <div class="container">
+          <h2 class="section__title">Сравнение моделей</h2>
+          <div class="table-wrap">
+            <table class="compare-table">
+              <caption>Сравнение ключевых характеристик iPhone 2023–2024</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Модель</th>
+                  <th scope="col">Чип</th>
+                  <th scope="col">Камера</th>
+                  <th scope="col">Экран</th>
+                  <th scope="col">Цена от</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>iPhone SE 3</td>
+                  <td>A15 Bionic</td>
+                  <td>12 Мп</td>
+                  <td>4.7″ Retina</td>
+                  <td>44 990 ₽</td>
+                </tr>
+                <tr>
+                  <td>iPhone 14</td>
+                  <td>A15 Bionic</td>
+                  <td>12 Мп</td>
+                  <td>6.1″ Super Retina XDR</td>
+                  <td>59 990 ₽</td>
+                </tr>
+                <tr>
+                  <td>iPhone 15</td>
+                  <td>A16 Bionic</td>
+                  <td>48 Мп</td>
+                  <td>6.1″ Super Retina XDR</td>
+                  <td>79 990 ₽</td>
+                </tr>
+                <tr>
+                  <td>iPhone 15 Pro</td>
+                  <td>A17 Pro</td>
+                  <td>48 + 12 + 12 Мп</td>
+                  <td>6.1″ ProMotion 120 Гц</td>
+                  <td>109 990 ₽</td>
+                </tr>
+                <tr>
+                  <td>iPhone 15 Pro Max</td>
+                  <td>A17 Pro</td>
+                  <td>48 + 12 + 12 Мп</td>
+                  <td>6.7″ ProMotion 120 Гц</td>
+                  <td>129 990 ₽</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--gray">
+        <div class="container">
+          <h2 class="section__title">Галерея</h2>
+          <div class="gallery">
+            <figure class="gallery__item gallery__item--wide">
+              <img
+                src="https://images.unsplash.com/photo-1574920162043-b872873f19c8?w=800&q=80"
+                alt="Снимок с камеры iPhone — городской пейзаж"
+                width="800"
+                height="450"
+              />
+              <figcaption>Снято на iPhone 15 Pro</figcaption>
+            </figure>
+            <figure class="gallery__item">
+              <img
+                src="https://images.unsplash.com/photo-1565849904461-04a58ad377e0?w=400&q=80"
+                alt="Коллекция цветов iPhone 15"
+                width="400"
+                height="300"
+              />
+              <figcaption>Палитра цветов iPhone 15</figcaption>
+            </figure>
+            <figure class="gallery__item">
+              <img
+                src="https://images.unsplash.com/photo-1602520514637-e35d8af5c1e8?w=400&q=80"
+                alt="MagSafe зарядка"
+                width="400"
+                height="300"
+              />
+              <figcaption>Беспроводная зарядка MagSafe</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--cta">
+        <div class="container cta-inner">
+          <div class="cta-text">
+            <h2 class="cta-title">Будьте первыми</h2>
+            <p>Подпишитесь на новости об iPhone и получайте обзоры раньше всех.</p>
+          </div>
+          <form class="cta-form" action="#" method="get" novalidate>
+            <label for="email-sub" class="sr-only">Ваш e-mail</label>
+            <input
+              class="cta-form__input"
+              type="email"
+              id="email-sub"
+              name="email"
+              placeholder="your@email.com"
+              required
+            />
+            <button class="btn btn--primary" type="submit">Подписаться</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer__inner">
+        <p class="footer__copy">&copy; 2024 iPhone Universe. Учебный проект.</p>
+        <nav class="footer__nav">
+          <a href="index.html" class="footer__link">Главная</a>
+          <a href="form.html" class="footer__link">Регистрация</a>
+          <a href="demo.html" class="footer__link">Демо</a>
+          <a href="mailto:info@iphone-universe.ru" class="footer__link">Написать нам</a>
+          <a href="tel:+8 966 378 14 42" class="footer__link">8 966 378 14 42</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

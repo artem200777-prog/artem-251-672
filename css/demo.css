@@ -1,0 +1,227 @@
+/* =========================================
+   demo.css — страница демо CSS эффектов
+   Лабораторная работа №9
+   ========================================= */
+
+.demo-main {
+  padding-top: 110px;
+  padding-bottom: 5rem;
+  min-height: 100vh;
+}
+
+.demo-page-title {
+  font-size: var(--fs-2xl);
+  color: var(--clr-white);
+  margin-bottom: 0.4rem;
+}
+
+.demo-page-sub {
+  color: var(--clr-text-muted);
+  margin-bottom: 3rem;
+}
+
+.demo-section {
+  margin-bottom: 4rem;
+}
+
+.demo-section__title {
+  font-size: 1.5rem;
+  color: var(--clr-accent);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--clr-border);
+}
+
+.demo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.demo-card {
+  flex: 1 1 260px;
+  background-color: var(--clr-surface);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+}
+
+.demo-card__label {
+  font-size: 0.95rem;
+  color: var(--clr-text);
+  margin-bottom: 1rem;
+  font-weight: var(--fw-medium);
+}
+
+.demo-code {
+  display: block;
+  margin-top: 1rem;
+  font-size: 0.72rem;
+  color: var(--clr-text-muted);
+  font-family: monospace;
+  background-color: rgba(255, 255, 255, 0.04);
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  border: 1px solid var(--clr-border);
+  word-break: break-all;
+}
+
+/* =========================================
+   ГРАДИЕНТНЫЕ БОКСЫ
+   ========================================= */
+.grad-box {
+  height: 140px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grad-label {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semi);
+  text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+}
+
+/* ЛАБ 9: линейный */
+.grad-linear {
+  background: linear-gradient(135deg, #f5a623 0%, #e8445a 50%, #9b42f5 100%);
+}
+
+/* ЛАБ 9: радиальный */
+.grad-radial {
+  background: radial-gradient(circle at 30% 30%, #1d7aff 0%, #0a2a6a 50%, #0a0a0a 100%);
+}
+
+/* ЛАБ 9: конический */
+.grad-conic {
+  background: conic-gradient(from 0deg, #f5a623, #e8445a, #1d7aff, #1adb8a, #f5a623);
+  border-radius: 50%;
+  width: 140px;
+  height: 140px;
+  margin: 0 auto;
+}
+
+/* =========================================
+   2D TRANSFORMS
+   ========================================= */
+.transform-box {
+  height: 130px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  background-color: var(--clr-surface-alt);
+  border: 1px solid var(--clr-border);
+  cursor: pointer;
+  /* ЛАБ 9: transition */
+  transition: transform var(--transition-med), box-shadow var(--transition-med);
+}
+
+/* ЛАБ 9: 2D rotate + scale */
+.transform-2d-1:hover {
+  transform: rotate(180deg) scale(1.2);
+  box-shadow: 0 8px 24px rgba(245, 166, 35, 0.3);
+}
+
+/* ЛАБ 9: 2D skew + translate */
+.transform-2d-2 {
+  font-size: 1.5rem;
+  font-family: var(--ff-display);
+  color: var(--clr-white);
+}
+
+.transform-2d-2:hover {
+  transform: skewX(-12deg) translateX(12px);
+  box-shadow: 0 8px 24px rgba(232, 68, 90, 0.3);
+  color: var(--clr-accent-2);
+}
+
+/* =========================================
+   3D TRANSFORMS
+   ========================================= */
+.scene {
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 600px;
+}
+
+.cube-face {
+  width: 140px;
+  height: 80px;
+  background: linear-gradient(135deg, #1d7aff, #0a2a6a);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--clr-white);
+  font-weight: var(--fw-semi);
+  font-size: 0.95rem;
+  border: 1px solid rgba(29, 122, 255, 0.4);
+  cursor: pointer;
+  /* ЛАБ 9: transition */
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.6s ease;
+}
+
+/* ЛАБ 9: 3D rotateY */
+.scene-1:hover .cube-face {
+  transform: perspective(600px) rotateY(40deg);
+  box-shadow: -8px 8px 30px rgba(29, 122, 255, 0.4);
+}
+
+.cube-face--x {
+  background: linear-gradient(135deg, #9b42f5, #5a1fab);
+  border-color: rgba(155, 66, 245, 0.4);
+}
+
+/* ЛАБ 9: 3D rotateX */
+.scene-2:hover .cube-face--x {
+  transform: perspective(600px) rotateX(40deg);
+  box-shadow: 0 12px 30px rgba(155, 66, 245, 0.4);
+}
+
+/* =========================================
+   TRANSITIONS
+   ========================================= */
+.transition-box {
+  height: 120px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-weight: var(--fw-medium);
+  font-size: var(--fs-sm);
+}
+
+/* ЛАБ 9: transition фона */
+.transition-1 {
+  background-color: var(--clr-surface-alt);
+  color: var(--clr-text-muted);
+  border: 1px solid var(--clr-border);
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.transition-1:hover {
+  background-color: var(--clr-accent);
+  color: #000;
+}
+
+/* ЛАБ 9: transition scale + shadow */
+.transition-2 {
+  background: linear-gradient(135deg, #1c1c1e, #2a2a2e);
+  color: var(--clr-white);
+  border: 1px solid var(--clr-border);
+  transition: transform 0.4s cubic-bezier(0.17, 0.67, 0.83, 0.67),
+              box-shadow 0.4s ease;
+}
+
+.transition-2:hover {
+  transform: scale(1.06);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(245, 166, 35, 0.2);
+}

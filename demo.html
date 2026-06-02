@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Демо CSS — iPhone Universe</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/demo.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav container">
+        <a href="index.html" class="nav__logo">
+          <img class="nav__logo-icon" src="img/apple-logo.svg" alt="" width="22" height="22" /> iPhone Universe
+        </a>
+        <ul class="nav__list">
+          <li class="nav__item"><a href="index.html" class="nav__link">Главная</a></li>
+          <li class="nav__item"><a href="form.html" class="nav__link">Регистрация</a></li>
+          <li class="nav__item"><a href="demo.html" class="nav__link nav__link--cta">Демо</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="demo-main">
+      <div class="container">
+        <h1 class="demo-page-title">CSS Демо</h1>
+        <p class="demo-page-sub">Примеры градиентов, преобразований и переходов — лабораторная работа №9</p>
+
+        <!-- ГРАДИЕНТЫ -->
+        <section class="demo-section">
+          <h2 class="demo-section__title">Градиенты</h2>
+          <div class="demo-grid">
+
+            <div class="demo-card">
+              <h3 class="demo-card__label">Линейный (linear-gradient)</h3>
+              <div class="grad-box grad-linear">
+                <span class="grad-label">linear-gradient</span>
+              </div>
+              <code class="demo-code">linear-gradient(135deg, #f5a623, #e8445a)</code>
+            </div>
+
+            <div class="demo-card">
+              <h3 class="demo-card__label">Радиальный (radial-gradient)</h3>
+              <div class="grad-box grad-radial">
+                <span class="grad-label">radial-gradient</span>
+              </div>
+              <code class="demo-code">radial-gradient(circle at 30% 30%, #1d7aff, #0a0a0a)</code>
+            </div>
+
+            <div class="demo-card">
+              <h3 class="demo-card__label">Конический (conic-gradient)</h3>
+              <div class="grad-box grad-conic">
+                <span class="grad-label">conic-gradient</span>
+              </div>
+              <code class="demo-code">conic-gradient(from 0deg, #f5a623, #e8445a, #1d7aff, #f5a623)</code>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- 2D ПРЕОБРАЗОВАНИЯ -->
+        <section class="demo-section">
+          <h2 class="demo-section__title">2D-преобразования (transform)</h2>
+          <div class="demo-grid">
+
+            <div class="demo-card">
+              <h3 class="demo-card__label">Rotate + Scale (hover)</h3>
+              <div class="transform-box transform-2d-1">
+                <span>&#63743;</span>
+              </div>
+              <code class="demo-code">transform: rotate(45deg) scale(1.2)</code>
+            </div>
+
+            <div class="demo-card">
+              <h3 class="demo-card__label">Skew + Translate (hover)</h3>
+              <div class="transform-box transform-2d-2">
+                <span>iPhone</span>
+              </div>
+              <code class="demo-code">transform: skewX(-12deg) translateX(10px)</code>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- 3D ПРЕОБРАЗОВАНИЯ -->
+        <section class="demo-section">
+          <h2 class="demo-section__title">3D-преобразования</h2>
+          <div class="demo-grid">
+
+            <div class="demo-card">
+              <h3 class="demo-card__label">RotateY 3D (hover)</h3>
+              <div class="scene scene-1">
+                <div class="cube-face">
+                  <span>iPhone 15</span>
+                </div>
+              </div>
+              <code class="demo-code">transform: perspective(600px) rotateY(40deg)</code>
+            </div>
+
+            <div class="demo-card">
+              <h3 class="demo-card__label">RotateX 3D (hover)</h3>
+              <div class="scene scene-2">
+                <div class="cube-face cube-face--x">
+                  <span>Pro Max</span>
+                </div>
+              </div>
+              <code class="demo-code">transform: perspective(600px) rotateX(40deg)</code>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- ПЕРЕХОДЫ -->
+        <section class="demo-section">
+          <h2 class="demo-section__title">Переходы (transition)</h2>
+          <div class="demo-grid">
+
+            <div class="demo-card">
+              <h3 class="demo-card__label">Цвет фона (ease)</h3>
+              <div class="transition-box transition-1">
+                <span>Наведите мышь</span>
+              </div>
+              <code class="demo-code">transition: background-color 0.5s ease</code>
+            </div>
+
+            <div class="demo-card">
+              <h3 class="demo-card__label">Размер + тень (cubic-bezier)</h3>
+              <div class="transition-box transition-2">
+                <span>Hover меня</span>
+              </div>
+              <code class="demo-code">transition: transform 0.4s cubic-bezier(.17,.67,.83,.67), box-shadow 0.4s ease</code>
+            </div>
+
+          </div>
+        </section>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer__inner">
+        <p class="footer__copy">&copy; 2024 iPhone Universe. Учебный проект.</p>
+        <nav class="footer__nav">
+          <a href="index.html" class="footer__link">Главная</a>
+          <a href="form.html" class="footer__link">Регистрация</a>
+          <a href="demo.html" class="footer__link">Демо</a>
+          <a href="mailto:info@iphone-universe.ru" class="footer__link">Написать нам</a>
+          <a href="tel:+78001234567" class="footer__link">8 800 123-45-67</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

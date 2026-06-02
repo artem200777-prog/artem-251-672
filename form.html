@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Регистрация — iPhone Universe</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/form.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="form-page">
+    <header class="site-header">
+      <nav class="nav container">
+        <a href="index.html" class="nav__logo">
+          <img class="nav__logo-icon" src="img/apple-logo.svg" alt="" width="22" height="22" /> iPhone Universe
+        </a>
+        <ul class="nav__list">
+          <li class="nav__item"><a href="index.html#models" class="nav__link">Модели</a></li>
+          <li class="nav__item"><a href="demo.html" class="nav__link">Демо</a></li>
+          <li class="nav__item"><a href="form.html" class="nav__link nav__link--cta">Регистрация</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="form-main">
+      <div class="container">
+        <div class="form-wrap">
+          <h1 class="form-title">Регистрация</h1>
+          <p class="form-subtitle">Присоединяйтесь к сообществу любителей iPhone</p>
+
+          <form class="reg-form" action="#" method="post" novalidate>
+
+            <!-- ГРУППА 1: Личная информация -->
+            <fieldset class="form-group">
+              <legend class="form-group__legend">Личная информация</legend>
+
+              <div class="form-row">
+                <div class="form-field">
+                  <label class="form-label" for="name">
+                    Имя <span class="form-required" aria-label="обязательное поле">*</span>
+                  </label>
+                  <input
+                    class="form-input"
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Иван Иванов"
+                    required
+                    autocomplete="name"
+                  />
+                </div>
+
+                <div class="form-field">
+                  <label class="form-label" for="birthdate">
+                    Дата рождения <span class="form-required" aria-label="обязательное поле">*</span>
+                  </label>
+                  <input
+                    class="form-input"
+                    type="date"
+                    id="birthdate"
+                    name="birthdate"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="form-field">
+                <p class="form-label">Пол</p>
+                <div class="radio-group">
+                  <label class="radio-label">
+                    <input type="radio" name="gender" value="male" />
+                    <span>Мужской</span>
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="gender" value="female" />
+                    <span>Женский</span>
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="gender" value="other" />
+                    <span>Не указывать</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-field">
+                <label class="form-label" for="password">
+                  Пароль <span class="form-required" aria-label="обязательное поле">*</span>
+                </label>
+                <input
+                  class="form-input"
+                  type="password"
+                  id="password"
+                  name="password"
+                  placeholder="Минимум 8 символов"
+                  required
+                  minlength="8"
+                />
+              </div>
+
+              <div class="form-field">
+                <p class="form-label">Интересы</p>
+                <div class="check-group">
+                  <label class="check-label">
+                    <input type="checkbox" name="interests" value="reviews" />
+                    <span>Обзоры</span>
+                  </label>
+                  <label class="check-label">
+                    <input type="checkbox" name="interests" value="news" />
+                    <span>Новости</span>
+                  </label>
+                  <label class="check-label">
+                    <input type="checkbox" name="interests" value="tips" />
+                    <span>Советы</span>
+                  </label>
+                  <label class="check-label">
+                    <input type="checkbox" name="interests" value="compare" />
+                    <span>Сравнения</span>
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+
+            <!-- ГРУППА 2: Контактные данные -->
+            <fieldset class="form-group">
+              <legend class="form-group__legend">Контактные данные</legend>
+
+              <div class="form-row">
+                <div class="form-field">
+                  <label class="form-label" for="email">
+                    E-mail <span class="form-required" aria-label="обязательное поле">*</span>
+                  </label>
+                  <input
+                    class="form-input"
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="ivan@example.com"
+                    required
+                    autocomplete="email"
+                  />
+                </div>
+
+                <div class="form-field">
+                  <label class="form-label" for="phone">
+                    Телефон
+                  </label>
+                  <input
+                    class="form-input"
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="+7 (999) 123-45-67"
+                    autocomplete="tel"
+                  />
+                </div>
+              </div>
+
+              <div class="form-field">
+                <label class="form-label" for="contact-time">Удобное время для связи</label>
+                <select class="form-input form-select" id="contact-time" name="contact_time">
+                  <option value="" disabled selected>Выберите время</option>
+                  <option value="morning">Утро (8:00–12:00)</option>
+                  <option value="day">День (12:00–17:00)</option>
+                  <option value="evening">Вечер (17:00–21:00)</option>
+                  <option value="night">Ночь (21:00–00:00)</option>
+                </select>
+              </div>
+
+              <div class="form-field">
+                <label class="form-label" for="message">Сообщение</label>
+                <textarea
+                  class="form-input form-textarea"
+                  id="message"
+                  name="message"
+                  placeholder="Расскажите, почему вас интересуют iPhone..."
+                  rows="4"
+                ></textarea>
+              </div>
+            </fieldset>
+
+            <!-- ЛАБ 8: список псевдоэлементов (чётные/нечётные стилизованы иначе) -->
+            <section class="pseudo-list-section">
+              <h2 class="pseudo-list-title">CSS псевдоэлементы</h2>
+              <ul class="pseudo-list">
+                <li class="pseudo-list__item">::before</li>
+                <li class="pseudo-list__item">::after</li>
+                <li class="pseudo-list__item">::first-letter</li>
+                <li class="pseudo-list__item">::first-line</li>
+                <li class="pseudo-list__item">::selection</li>
+                <li class="pseudo-list__item">::marker</li>
+                <li class="pseudo-list__item">::placeholder</li>
+              </ul>
+            </section>
+
+            <div class="form-actions">
+              <button class="btn btn--primary" type="submit">
+                &#10003; Зарегистрироваться
+              </button>
+              <button class="btn btn--outline" type="reset">
+                &#8635; Очистить форму
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer form-footer">
+      <div class="container footer__inner">
+        <p class="footer__copy">&copy; 2024 iPhone Universe. Учебный проект.</p>
+        <nav class="footer__nav">
+          <a href="index.html" class="footer__link">Главная</a>
+          <a href="form.html" class="footer__link">Регистрация</a>
+          <a href="demo.html" class="footer__link">Демо</a>
+          <a href="mail:Drozdov@magazin.mail.ru" class="footer__link">Написать нам</a>
+          <a href="tel:+79663781442" class="footer__link">8 966 378 14 42</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>
